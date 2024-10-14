@@ -1,0 +1,65 @@
+[
+  {
+    "Policy": {
+      "id": "policy001",
+      "description": "Doctors can access medical records during their shifts.",
+      "user_attributes": [
+        "role=doctor",
+        "location=hospital",
+        "shift=day"
+      ],
+      "object_attributes": [
+        "sensitivity=confidential",
+        "type=medical_record"
+      ],
+      "operations": [
+        "read"
+      ]
+    },
+    "User": {
+      "id": "user001",
+      "attributes": {
+        "role": "doctor",
+        "location": "hospital",
+        "shift": "day"
+      }
+    },
+    "Object": {
+      "id": "patient_record_001",
+      "attributes": {
+        "sensitivity": "confidential",
+        "type": "medical_record"
+      }
+    }
+  },
+  {
+    "Policy": {
+      "id": "policy002",
+      "description": "Accountants can view financial data in the finance department.",
+      "user_attributes": [
+        "role=accountant",
+        "department=finance"
+      ],
+      "object_attributes": [
+        "type=financial_data"
+      ],
+      "operations": [
+        "read"
+      ]
+    },
+    "User": {
+      "id": "user002",
+      "attributes": {
+        "role": "accountant",
+        "department": "finance"
+      }
+    },
+    "Object": {
+      "id": "financial_report_2023",
+      "attributes": {
+        "type": "financial_data",
+        "sensitivity": "internal"
+      }
+    }
+  }
+]

@@ -1,0 +1,50 @@
+{
+  "PolicyClass": {
+    "class_id": "confidential_data_access",
+    "description": "Policies governing access to confidential data.",
+    "rules": [
+      {
+        "rule_id": "rule001",
+        "user_attributes": [
+          "role=doctor",
+          "department=medical"
+        ],
+        "object_attributes": [
+          "sensitivity=confidential"
+        ],
+        "operations": [
+          "read",
+          "write"
+        ]
+      },
+      {
+        "rule_id": "rule002",
+        "user_attributes": [
+          "role=accountant",
+          "department=finance"
+        ],
+        "object_attributes": [
+          "sensitivity=high"
+        ],
+        "operations": [
+          "read"
+        ]
+      }
+    ],
+    "attributes": {
+      "user_attributes": [
+        "role",
+        "department"
+      ],
+      "object_attributes": [
+        "sensitivity",
+        "type"
+      ]
+    },
+    "operations": [
+      "read",
+      "write",
+      "delete"
+    ]
+  }
+}

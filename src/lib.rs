@@ -1,3 +1,11 @@
+pub(crate) mod dag;
+pub mod epp;
+pub mod pap;
+pub mod pdp;
+pub mod pep;
+pub mod pip;
+pub mod prp;
+
 pub fn add(left: u64, right: u64) -> u64 {
     left + right
 }
